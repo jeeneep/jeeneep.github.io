@@ -1,0 +1,336 @@
+/*  컬러 변수 설정 */
+:root {
+    --primary: #4F46E5;      /* 메인 */
+    --primary-hover: #4338CA;
+    --bg-light: #F8FAFC;     /* 전체 배경 */
+    --card-bg: #FFFFFF;      /* 카드 배경 */
+    --accent-bg: #EEF2FF;    /* Contacts 강조 배경 */
+    --text-main: #1E293B;    /* 주요 텍스트 */
+    --text-muted: #64748B;   /* 부가 설명 텍스트 */
+    --tag-bg: #E0E7FF;       /* 태그 배경색 */
+}
+
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* 네비게이션 */
+header {
+    padding: 1rem 10%;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #E2E8F0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.dark-mode-toggle {
+    background: #F1F5F9;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 히어로 섹션 */
+.hero-section {
+    display: flex;
+    padding: 6rem 10%;
+    align-items: center;
+    gap: 4rem;
+    background: #fff;
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #0F172A;
+}
+
+.hero-text span {
+    color: var(--primary);
+}
+
+.description {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 520px;
+}
+
+.hero-image img {
+    width: 340px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* 상세 섹션 레이아웃  */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 5rem 10%;
+}
+
+.section-label {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* 연락처 영역 포인트 디자인 */
+.contact-card {
+    background: var(--accent-bg);
+    padding: 2.5rem;
+    border-radius: 28px;
+    border: 1px solid var(--tag-bg);
+}
+
+.contact-list {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contact-icon {
+    font-size: 1.4rem;
+    background: white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);
+}
+
+.contact-info strong {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.contact-info a, .copyable {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* 프로젝트 영역 및 링크 */
+.projects-card {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 28px;
+    border: 1px solid #F1F5F9;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-item {
+    padding: 2rem;
+    border: 1px solid #F8FAFC;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* 프로젝트 호버 시 효과 */
+.project-item:hover {
+    background-color: #F9FAFB;
+    border-color: var(--tag-bg);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -8px rgba(79, 70, 229, 0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+/* 프로젝트 제목 링크 스타일 */
+.project-link {
+    text-decoration: none;
+    color: var(--text-main);
+    position: relative;
+    display: inline-block;
+}
+
+.project-link h3 {
+    font-size: 1.4rem;
+    transition: color 0.2s;
+}
+
+/* 호버 시 제목 색상 변경 및 밑줄 애니메이션 */
+.project-link:hover h3 {
+    color: var(--primary);
+}
+
+.project-link h3::after {
+    content: ' ↗'; 
+    font-size: 0.9rem;
+    color: #CBD5E1;
+    transition: color 0.2s;
+}
+
+.project-link:hover h3::after {
+    color: var(--primary);
+}
+
+/* 프로젝트 본문 */
+.project-summary {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-details {
+    padding-left: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-details li {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+/* 기술 태그 디자인 */
+.tech-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tech-tags span {
+    background: var(--tag-bg);
+    color: var(--primary);
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 4rem;
+    background: #fff;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid #F1F5F9;
+}
+
+/* 반응형 모바일 대응 */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 5%;
+    }
+    .hero-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .contact-list {
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
